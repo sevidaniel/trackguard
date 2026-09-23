@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>TrackGuard - Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+  <div class="bg-white p-8 rounded-lg shadow-md w-96">
+    <h1 class="text-2xl font-bold mb-4 text-center text-blue-600">TrackGuard Login</h1>
+    <% if (error) { %>
+      <div class="bg-red-100 text-red-700 p-2 rounded mb-4 text-sm"><%= error %></div>
+    <% } %>
+    <form action="/login" method="POST" class="space-y-4">
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Email</label>
+        <input type="email" name="email" required class="w-full border p-2 rounded mt-1">
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Password</label>
+        <input type="password" name="password" required class="w-full border p-2 rounded mt-1">
+      </div>
+      <button type="submit" class="w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700 font-semibold">Login</button>
+    <div class="mt-4 text-center">
+  <a href="/register" class="text-sm text-blue-600 hover:underline">Need an account? Sign up here</a>
+</div>
+    </form>
+  </div>
+</body>
+</html>
